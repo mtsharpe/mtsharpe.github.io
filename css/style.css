@@ -1,36 +1,99 @@
 body {
 	text-align: center;
+	height: 760px;
+	background: #000;
+}
+
+.hero {
+	width: 100%;
+	position: relative;
+	margin-top: -300px;
+	z-index: -1;
+}
+
+.logo {
+	width: 300px;
+	height: auto;
+	float: left;
+	margin-left: 40px;
 }
 
 h1 {
 	font-family: Helvetica, sans-serif;
-	margin: 20px auto;
-	width: 500px;
-	border-top: 2px solid #f15b31;
-	color: #f15b31;
-    padding: 8px;
-    text-transform: uppercase;
+	font-weight: 300;
+	position: relative;
+	font-size: 60px;
+	color: #fff;
+	top: 300px;
+	margin: 0 auto;
+	width: 300px;
+	border-bottom: 1px solid white;
+	padding: 20px; 
 }
- 
-h1:hover {
-	color: #0d2c40;
-} 
 
 nav {
-	background: #c8c8c8;
-	height: 35px;
-	padding-top: 20px;
+    background: rgba(0,0,0,1);
+	height: 70px;
+	margin-top: 40px;
+	width: 100%;
+	border-bottom: 2px solid #3798bf;
+	position: sticky;
+	-webkit-position: sticky;
+	top: 0;
 }
 
-a {
+.top {
 	text-decoration: none;
-	color: #f15b31;
+	color: #3798bf;
 	text-transform: uppercase;
 	font-family: Helvetica, sans-serif;
 	padding: 0 20px 0 20px;
+	float: right;
+	margin: 30px 40px 0 0; 
 }
 
-a:hover {
+.top:hover {
 	color: white;
+}
+
+.game {
+	width: 300px;
+	margin: 0 auto;
+	top: 300px;
+	font-family: Helvetica, sans-serif;
+	color: white;
+	text-decoration: none;
+	position: relative;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+p {
+	background: transparent;
+	width: 300px;
+	padding: 20px;
+	margin: 0 auto;
+	border: 1px solid transparent;
+}
+p:hover {
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid white;
+}
+
+footer {
+	background: #000;
+	height: 10px;
+	width: 100%;
+	top: -10px;
+	z-index: 1;
+}
+
+h3 {
+	color: #3798bf;
+	font-family: Helvetica, sans-serif;
+	padding-top: 10px;
+	top: -23px;
+	position: relative;
+	border-top: 2px solid #3789bf;
 }
 
