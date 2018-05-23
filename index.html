@@ -10,7 +10,8 @@
 
 <nav>
 	<a class="top" href="#about">About me</a>
-	<a class="top" href="#portfolio">Portfolio</a>
+	<a class="top" href="#portfolio">Digital Portfolio</a>
+	<a class="top" href="#print">Print Portfolio</a>
 	<a class="top" href="#contact">Contact</a>
 </nav>	
 
@@ -22,12 +23,29 @@
 
 <section>
 <div class="content"  id="about">
-	<img class="mugshot" src="images/Me_square.png">
-	<h1>About Me</h1>
-	<h5 class="brand">I am an experienced, dedicated and determined designer and web developer with an eye for detail.<br> My journalism background instilled in me a respect for deadlines and a passion for getting things right.<br> My inspiration comes from finding solutions to problems in a way that puts creativity front and center.<h5>
-	<h4>My Skills</h4>
-	<h5 class="brand">HTML | CSS | JavaScript | React | Python | Django | PostgreSQL | Adobe Creative Suite</h5>
-	<a class="brand resume" href="./images/Resume.pdf">Resume</a>
+	<div class="grid-container">
+		<div class="grid-item">
+			<img class="mugshot" src="images/Me_square.png">
+			<h1>About Me</h1>
+			<h5 class="brand">I am an experienced, dedicated and determined designer<br> and web developer with an eye for detail. <br>My journalism background instilled in me a respect<br> for deadlines and a passion for getting things right. <br>My inspiration comes from finding solutions to problems<br> in a way that puts creativity front and center.<h5>
+		</div>
+		<div class="grid-item right">
+			<h4 class="skills">Skills</h4>
+				<ul class="list">
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>Adobe CS</li>
+					<li>JavaScript</li>
+					<li>Python</li>
+					<li>Django</li>
+					<li>PostgreSQL</li>
+					<li>React</li>
+					<li>Express</li>
+					<li>Mongoose</li>
+				</ul>
+				<a class="resume" href="./images/Resume.pdf">Resume</a>
+		</div>
+	</div>
 </div>
 </section>
 
@@ -35,7 +53,7 @@
 <div id="portfolio">
 	
 		<div class="css-carousel content">
-				<h1 class="portfolio">Portfolio</h1>
+				<h1 class="portfolio">Digital Portfolio</h1>
 				<!-- carousel controls -->
 				<input type="radio" name="carousel" id="carousel-1" checked />
 				<input type="radio" name="carousel" id="carousel-2" />
@@ -76,19 +94,56 @@
 </section>
 
 <section>
-<div class="content" id="contact">
-	<h1>Contact</h1>
+<div class="content" id="print">
+		<div class="css-carousel content">
+				<h1 class="portfolio">Print Portfolio</h1>
+				<!-- carousel controls -->
+				<input type="radio" name="carousel" id="carousel-1" checked />
+				<input type="radio" name="carousel" id="carousel-2" />
+				<input type="radio" name="carousel" id="carousel-3" />
+		 
+				<!-- carousel navigation -->
+				<div class="carousel-nav">
+						<label for="carousel-1"></label>
+						<label for="carousel-2"></label>
+						<label for="carousel-3"></label>
+				</div>
+		 
+				<!-- carousel slides -->
+				<div class="carousel-slides">
+						<div class="carousel-inner">
+								<div class="carousel-item print">
+										<a href="images/Magazine_cover.pdf" target="_blank"/><img class="cover" src="images/Magazine cover.png">
+									
+									
+									<h4 class="slides">Magazine Covers</h4>
+									<p class="slideinfo">Description</p>
+								</div>
+								<div class="carousel-item">
+										<a href="" target="_blank"/><img class="" src="">
+									<h4 class="slides">Magazine Covers</h4>
+									<p class="slideinfo">Description</p>
+								</div>
+								<div class="carousel-item">
+										<a href="" target="_blank"/><img class="" src="">
+									<h4 class="slides">Magazine Covers</h4>
+									<p class="slideinfo">Description</p>
+								</div>
+						</div>
+				</div>
+		 
+			</div>
+
+</div>
+</section>
+
+<footer id="contact">
+		<h1 class="contact">Contact</h1>
 	<div>
 		<a href="https://github.com/mtsharpe" target="_blank"><img class="icon" src="images/GitHubSmall.svg" alt=""></a> 
 		<a href="https://www.linkedin.com/in/matthew-sharpe-956513131/" target="_blank"><img class="icon" src="images/LinkedIn.svg" alt=""></a> 
 		<a href="mailto:mattsharpe72@gmail.com"><img class="icon" src="images/Email.svg" alt=""></a> 
 	</div>
-
-</div>
-</section>
-
-<footer>
-	<h3>&copy; 2018</h3>
 </footer>
 
 <script src='./js/main.js'></script>
