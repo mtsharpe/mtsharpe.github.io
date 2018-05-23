@@ -1,179 +1,313 @@
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	font-weight: 500;
-	font-family: 'HelveticaNeue', sans-serif;
-	text-align: center;
+  margin: 0;
+  font-weight: 500;
+  font-family: 'HelveticaNeue', sans-serif;
+  text-align: center;
 }
 
 nav {
   background: #3798bf;
-	height: 40px;
-	width: 100%;
-	border-bottom: 2px solid #3798bf;
-	position: sticky;
-	-webkit-position: sticky;
-	top: 0;
-	line-height: 40px;
-} 
+  height: 60px;
+  width: 100%;
+  border-bottom: 2px solid #3798bf;
+  position: sticky;
+  -webkit-position: sticky;
+  top: 0;
+  line-height: 60px;
+  z-index: 8;
+}
 
 .top {
-	text-decoration: none;
-	color: white;
-	text-transform: uppercase;
-	padding: 0 20px 0 20px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 0 20px 0 20px;
 	margin: 0 10px;
+	font-size: 20px;
 }
 
 .top:hover {
-	color: black;
-} 
+  color: black;
+}
 
 section {
-	width: 100%;
-	padding: 0 7%;
-	display: table;
-	margin: 0;
-	max-width: none;
-	background: #000000;
-	height: 100vh;
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  background: #000000;
+  height: 100vh;
 }
 
 section:nth-of-type(2n) {
-	background: #3798bf;
-}	
+  background: #3798bf;
+}
 
 .intro {
-	height: 93vh;
+  height: 91vh;
+  width: 100vw;
+  background-color: black;
 }
 
 .content {
-	display: table-cell;
-	vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.myName {
-	width: 60%;
-	position: relative;
+.svg-container {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+svg {
+  margin-top: -10px;
+  left: 50%;
+  bottom: 0;
+  width: 60%;
+  height: 100%;
+}
+
+@keyframes colorChange {
+  0% {
+    fill: #3798bf;
+  }
+  25% {
+    fill: #ffc742;
+  }
+  50% {
+    fill: #ff6342;
+  }
+  75% {
+    fill: #465BC9;
+	}
+	100% {
+    fill: #3798bf;
+  }
+}
+
+.box, .cls-2 {
+  animation: colorChange 16s infinite;
+}
+
+
+@keyframes drop {
+  0% {
+    transform: translateY(-250%);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10%);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2%);
+  }
+  70% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-0.5);
+  }
+  82% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 #theE {
-	position: relative;
-	width: 60%;
-	margin-top: -9.2%;
-	margin-bottom: 10%;
+  animation: drop 4s;
 }
 
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-.fade-in {
-	opacity:0;  /* make things invisible upon start */
-	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-	animation:fadeIn ease-in 1;
-
-	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-	animation-fill-mode:forwards;
-
-	-webkit-animation-duration:4s;
-	animation-duration:4s;
-} 
-
 h1 {
-	font-size: 80px;
-	display: block;
-	color: white;
-	font-weight: 400;
+  font-size: 60px;
+  display: block;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 h4 {
-	font-size: 28px;
-	color: white;
-	text-transform: uppercase;
-	font-weight: 300;
-	letter-spacing: .038em;
+  font-size: 28px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+	letter-spacing: 0.038em;
 }
 
-.subhed {
-	margin-top: -10%;
+a {
+	text-decoration: none;
 }
+
 
 footer {
-	background: #000;
-	height: 70px;
-	width: 100%;
-	margin-top: -20px;
+  background: #000;
+  height: 70px;
+  width: 100%;
+  margin-top: -20px;
 }
 
 h3 {
-	color: #3798bf;
-	font-family: Helvetica, sans-serif;
-	padding-top: 10px;
-	border-top: 2px solid #3789bf;
+  color: #3798bf;
+  font-family: Helvetica, sans-serif;
+  padding-top: 10px;
+  border-top: 2px solid #3789bf;
 }
 
 .brand {
-	color: white;
-	font-size: 20px;
-	font-weight: 300;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 .link {
-	text-align: center;
-	text-decoration: none;
+  text-align: center;
+  text-decoration: none;
 }
 
 .mugshot {
-	border: 2px solid white;
-	border-radius: 100%;
-	height: 15%;
-	margin: -100px 0 -40px 0;
+  border: 2px solid white;
+  border-radius: 100%;
+  height: 15%;
+  margin: -100px 0 -40px 0;
 }
 
 p {
-	position: relative;
-	color: white;
+  position: relative;
+  color: white;
 }
 
 .icon {
-	width: 90px;
-	padding: 0 6px 40px 6px;
-	margin-bottom: 40px
+  width: 90px;
+  padding: 0 6px 40px 6px;
+  margin-bottom: 40px;
 }
 
 .resume {
-	border-top: 1px solid white;
-	border-bottom: 1px solid white;
-	text-decoration: none;
-	font-size: 30px;
-	color: white;
-	font-weight: 900;
-	padding: 2px 20px 2px 20px;
-	margin-top: 80px;
-	text-transform: uppercase;
-}
-
-.grid-container {
-	display: inline-grid;
-	grid-template-columns: 1fr 1fr;
-	width: 1200px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  font-weight: 900;
+  padding: 2px 20px 2px 20px;
+  margin-top: 80px;
+  text-transform: uppercase;
 }
 
 .gif {
-	width: 100%;
-	height: auto;
-	padding-left: 22px;
-	float: left;
-}
-.container-item {
-	display: grid;
+  width: 70%;
+  height: auto;
+	margin: 0 auto;
+	border: 1px solid #fff;
+	background-color: black;
+	padding: 20px 20px 100px 20px;
 }
 
-p {
-	color: white;
+.slides {
+	margin-top: -90px;
+	color: #fff
+}
+
+.slideinfo {
+	color: #fff;
+	margin-top: -30px;
+}
+
+.css-carousel {
+  position: relative;
+  z-index: 1;
+}
+
+.css-carousel input[name='carousel'] {
+  display: none;
+}
+
+.css-carousel .carousel-nav {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.css-carousel .carousel-nav label {
+  display: inline-block;
+  margin: 0 10px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: background-color 0.25s;
+  -moz-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+
+.css-carousel #carousel-1:checked ~ .carousel-nav label[for='carousel-1'] {
+  background-color: #3798bf;
+}
+
+.css-carousel #carousel-2:checked ~ .carousel-nav label[for='carousel-2'] {
+  background-color: #3798bf;
+}
+
+.css-carousel #carousel-3:checked ~ .carousel-nav label[for='carousel-3'] {
+  background-color: #3798bf;
+}
+
+.css-carousel #carousel-4:checked ~ .carousel-nav label[for='carousel-4'] {
+  background-color: #3798bf;
+}
+
+.css-carousel .carousel-slides {
+  width: 100%;
+  overflow: hidden;
+}
+
+.css-carousel .carousel-slides .carousel-inner {
+  width: 400%;
+  -webkit-transition: margin 1s;
+  -moz-transition: margin 1s;
+  -o-transition: margin 1s;
+  transition: margin 1s;
+}
+
+.css-carousel .carousel-slides .carousel-item {
+  float: left;
+  width: 25%;
+}
+
+.css-carousel #carousel-1:checked ~ .carousel-slides .carousel-inner {
+  margin-left: 0%;
+}
+
+.css-carousel #carousel-2:checked ~ .carousel-slides .carousel-inner {
+  margin-left: -100%;
+}
+
+.css-carousel #carousel-3:checked ~ .carousel-slides .carousel-inner {
+  margin-left: -200%;
+}
+
+.css-carousel #carousel-4:checked ~ .carousel-slides .carousel-inner {
+  margin-left: -300%;
 }
