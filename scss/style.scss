@@ -403,6 +403,7 @@ p {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .mouse {
   max-width: 2.5rem;
   width: 100%;
@@ -492,6 +493,7 @@ $css-carousel: (
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   width: 90%;
+  overflow: scroll;
 }
 
 .container {
@@ -538,7 +540,6 @@ $css-carousel: (
   text-align: center;
 }
 
-
 .gallery-container-bottom {
   display: inline-grid;
   margin: 0 auto;
@@ -546,4 +547,14 @@ $css-carousel: (
   grid-gap: 26px;
   padding-top: 40px;
   width: 90%;
+  overflow: scroll;
+}
+
+@media screen and (max-width: 1600px) {
+  .cover {
+    height: 200px
+  } 
+  .overlay {
+    height: 200px;
+  }
 }
