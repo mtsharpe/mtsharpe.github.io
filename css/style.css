@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Alfa+Slab+One");
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
@@ -14,7 +15,7 @@ nav {
   width: 100%;
   border-bottom: 2px solid #3798bf;
   position: sticky;
-  -webkit-position: sticky;
+  -webkit-position: -webkit-sticky;
   top: 0;
   line-height: 50px;
   z-index: 8; }
@@ -121,9 +122,11 @@ ul {
 li {
   padding-top: 4px;
   margin-left: -5px;
+  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out; }
 
 li:hover {
+  -webkit-transform: scale(1.1);
   transform: scale(1.1);
   margin-left: 10px;
   cursor: pointer; }
@@ -183,10 +186,10 @@ p {
   height: auto;
   margin: 0 auto;
   background-color: black;
-  padding: 20px 20px 90px 20px; }
+  padding: 0px 20px 140px 20px; }
 
 .slides {
-  margin-top: -60px;
+  margin-top: -130px;
   color: #fff; }
 
 .slideinfo {
@@ -202,7 +205,7 @@ p {
 
 .css-carousel .carousel-nav {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
   right: 0;
   text-align: center;
@@ -214,13 +217,9 @@ p {
   width: 20px;
   height: 20px;
   border: 1px solid #fff;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   cursor: pointer;
   -webkit-transition: background-color 0.25s;
-  -moz-transition: background-color 0.25s;
-  -o-transition: background-color 0.25s;
   transition: background-color 0.25s; }
 
 .css-carousel #carousel-1:checked ~ .carousel-nav label[for='carousel-1'] {
@@ -242,8 +241,6 @@ p {
 .css-carousel .carousel-slides .carousel-inner {
   width: 400%;
   -webkit-transition: margin 1s;
-  -moz-transition: margin 1s;
-  -o-transition: margin 1s;
   transition: margin 1s; }
 
 .css-carousel .carousel-slides .carousel-item {
@@ -262,6 +259,18 @@ p {
 .css-carousel #carousel-4:checked ~ .carousel-slides .carousel-inner {
   margin-left: -300%; }
 
+@-webkit-keyframes colorChange {
+  0% {
+    fill: #3798bf; }
+  25% {
+    fill: #ffc742; }
+  50% {
+    fill: #ff6342; }
+  75% {
+    fill: #465bc9; }
+  100% {
+    fill: #3798bf; } }
+
 @keyframes colorChange {
   0% {
     fill: #3798bf; }
@@ -276,27 +285,74 @@ p {
 
 .box,
 .cls-2 {
+  -webkit-animation: colorChange 16s infinite;
   animation: colorChange 16s infinite; }
+
+@-webkit-keyframes drop {
+  0% {
+    -webkit-transform: translateY(-250%);
+    transform: translateY(-250%); }
+  10% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  20% {
+    -webkit-transform: translateY(-10%);
+    transform: translateY(-10%); }
+  40% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-2%);
+    transform: translateY(-2%); }
+  70% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  80% {
+    -webkit-transform: translateY(-0.5);
+    transform: translateY(-0.5); }
+  82% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
 
 @keyframes drop {
   0% {
+    -webkit-transform: translateY(-250%);
     transform: translateY(-250%); }
   10% {
+    -webkit-transform: translateY(0);
     transform: translateY(0); }
   20% {
+    -webkit-transform: translateY(-10%);
     transform: translateY(-10%); }
   40% {
+    -webkit-transform: translateY(0);
     transform: translateY(0); }
   50% {
+    -webkit-transform: translateY(-2%);
     transform: translateY(-2%); }
   70% {
+    -webkit-transform: translateY(0);
     transform: translateY(0); }
   80% {
+    -webkit-transform: translateY(-0.5);
     transform: translateY(-0.5); }
   82% {
+    -webkit-transform: translateY(0);
     transform: translateY(0); }
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0); } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  99% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 @keyframes fadeIn {
   0% {
@@ -307,25 +363,45 @@ p {
     opacity: 1; } }
 
 #theE {
+  -webkit-animation-name: fadeIn, drop;
   animation-name: fadeIn, drop;
+  -webkit-animation-duration: 2100ms, 4s;
   animation-duration: 2100ms, 4s;
+  -webkit-animation-delay: 0ms, 2000ms;
   animation-delay: 0ms, 2000ms;
+  -webkit-animation-timing-function: ease-in, ease-out;
   animation-timing-function: ease-in, ease-out;
+  -webkit-animation-iteration-count: 1, 1;
   animation-iteration-count: 1, 1; }
 
-@keyframes scroll {
+@-webkit-keyframes scroll {
   0%,
   20% {
+    -webkit-transform: translateY(0) scaleY(1);
     transform: translateY(0) scaleY(1); }
   10% {
     opacity: 1; }
   100% {
+    -webkit-transform: translateY(36px) scaleY(2);
+    transform: translateY(36px) scaleY(2);
+    opacity: 0.01; } }
+
+@keyframes scroll {
+  0%,
+  20% {
+    -webkit-transform: translateY(0) scaleY(1);
+    transform: translateY(0) scaleY(1); }
+  10% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateY(36px) scaleY(2);
     transform: translateY(36px) scaleY(2);
     opacity: 0.01; } }
 
 .scroll-link {
   position: absolute;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%); }
 
 .mouse {
@@ -335,10 +411,14 @@ p {
   margin-top: -4rem; }
 
 .scroll {
+  -webkit-animation-name: scroll;
   animation-name: scroll;
+  -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
   /* animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5); */
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 20.5px;
   transform-origin: 50% 20.5px;
   will-change: transform; }
 
@@ -361,6 +441,7 @@ p {
       border: 2px solid #fff;
       border-radius: 50%;
       cursor: pointer;
+      -webkit-transition: background-color 0.25s;
       transition: background-color 0.25s; }
   .css-carousel #carousel-1:checked ~ .carousel-nav label[for="carousel-1"] {
     background-color: #3798bf; }
@@ -375,6 +456,7 @@ p {
     overflow: hidden; }
     .css-carousel .carousel-slides .carousel-inner {
       width: 400%;
+      -webkit-transition: margin 1s;
       transition: margin 1s; }
     .css-carousel .carousel-slides .carousel-item {
       float: left;
@@ -417,6 +499,7 @@ p {
   height: 240px;
   width: 100%;
   opacity: 0;
+  -webkit-transition: .5s ease;
   transition: .5s ease;
   background-color: rgba(0, 0, 0, 0.8); }
 
@@ -429,6 +512,7 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center; }
@@ -441,6 +525,15 @@ p {
   padding-top: 40px;
   width: 90%;
   overflow: scroll; }
+
+.link {
+  font-weight: 600; }
+
+.link:hover {
+  color: #3798bf; }
+
+.pipe {
+  color: white; }
 
 @media screen and (max-width: 1600px) {
   .cover {
