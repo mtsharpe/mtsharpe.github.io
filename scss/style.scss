@@ -128,7 +128,8 @@ h3 {
 .mugshot {
   border: 2px solid white;
   border-radius: 100%;
-  height: 40%;
+  height: 220px;
+  width: auto;
   margin: 0 auto;
 }
 
@@ -161,6 +162,7 @@ li:hover {
   margin: 0 auto;
   grid-template-columns: 70% 30%;
 }
+
 
 .grid-item {
   display: grid;
@@ -395,39 +397,30 @@ p {
 
 @keyframes drop {
   0% {
-  -webkit-transform: translateY(-250%);
           transform: translateY(-250%);
   }
   10% {
-    -webkit-transform: translateY(0);
             transform: translateY(0);
   }
   20% {
-    -webkit-transform: translateY(-10%);
             transform: translateY(-10%);
   }
   40% {
-    -webkit-transform: translateY(0);
             transform: translateY(0);
   }
   50% {
-    -webkit-transform: translateY(-2%);
             transform: translateY(-2%);
   }
   70% {
-    -webkit-transform: translateY(0);
             transform: translateY(0);
   }
   80% {
-    -webkit-transform: translateY(-0.5);
             transform: translateY(-0.5);
   }
   82% {
-    -webkit-transform: translateY(0);
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(0);
             transform: translateY(0);
   }
 }
@@ -664,7 +657,6 @@ $css-carousel: (
 
 .gif-container:hover .gif-overlay {
   opacity: 1;
-  cursor: pointer;
 }
 
 .text {
@@ -706,5 +698,8 @@ $css-carousel: (
   } 
   .overlay {
     height: 200px;
+  }
+  .mugshot {
+    height: 160px;
   }
 }
